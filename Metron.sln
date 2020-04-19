@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Metron", "src\Metron\Metron.csproj", "{9805BA16-1570-454A-A22E-BF6ACC4B7C88}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Metron.Tests", "tests\Metron.Tests\Metron.Tests.csproj", "{A05A779E-94F6-4501-B002-F86D87897236}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9805BA16-1570-454A-A22E-BF6ACC4B7C88}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9805BA16-1570-454A-A22E-BF6ACC4B7C88}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9805BA16-1570-454A-A22E-BF6ACC4B7C88}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9805BA16-1570-454A-A22E-BF6ACC4B7C88}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A05A779E-94F6-4501-B002-F86D87897236}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A05A779E-94F6-4501-B002-F86D87897236}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A05A779E-94F6-4501-B002-F86D87897236}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A05A779E-94F6-4501-B002-F86D87897236}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

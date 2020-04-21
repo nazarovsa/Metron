@@ -4,6 +4,16 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Metron", "src\Metron\Metron
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Metron.Tests", "tests\Metron.Tests\Metron.Tests.csproj", "{A05A779E-94F6-4501-B002-F86D87897236}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Metron.Extensions", "src\Metron.Extensions\Metron.Extensions.csproj", "{A827A5FC-853E-402E-91C7-69835F260392}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Metron.Repository", "src\Metron.Repository\Metron.Repository.csproj", "{6D3862A4-8E2F-46FB-9DD4-243B1ADF8480}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Metron.Repository.Tests", "tests\Metron.Repository.Tests\Metron.Repository.Tests.csproj", "{845874CA-911B-4E90-88B0-08BA54C760E5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Metron.Extensions.Tests", "tests\Metron.Extensions.Tests\Metron.Extensions.Tests.csproj", "{AED50294-1F16-431B-BDBF-E72EAE69AC6A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{8ACF48B6-3115-478F-9FD2-519729D9805F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +28,26 @@ Global
 		{A05A779E-94F6-4501-B002-F86D87897236}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A05A779E-94F6-4501-B002-F86D87897236}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A05A779E-94F6-4501-B002-F86D87897236}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A827A5FC-853E-402E-91C7-69835F260392}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A827A5FC-853E-402E-91C7-69835F260392}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A827A5FC-853E-402E-91C7-69835F260392}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A827A5FC-853E-402E-91C7-69835F260392}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D3862A4-8E2F-46FB-9DD4-243B1ADF8480}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D3862A4-8E2F-46FB-9DD4-243B1ADF8480}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D3862A4-8E2F-46FB-9DD4-243B1ADF8480}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D3862A4-8E2F-46FB-9DD4-243B1ADF8480}.Release|Any CPU.Build.0 = Release|Any CPU
+		{845874CA-911B-4E90-88B0-08BA54C760E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{845874CA-911B-4E90-88B0-08BA54C760E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{845874CA-911B-4E90-88B0-08BA54C760E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{845874CA-911B-4E90-88B0-08BA54C760E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AED50294-1F16-431B-BDBF-E72EAE69AC6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AED50294-1F16-431B-BDBF-E72EAE69AC6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AED50294-1F16-431B-BDBF-E72EAE69AC6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AED50294-1F16-431B-BDBF-E72EAE69AC6A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{845874CA-911B-4E90-88B0-08BA54C760E5} = {8ACF48B6-3115-478F-9FD2-519729D9805F}
+		{AED50294-1F16-431B-BDBF-E72EAE69AC6A} = {8ACF48B6-3115-478F-9FD2-519729D9805F}
+		{A05A779E-94F6-4501-B002-F86D87897236} = {8ACF48B6-3115-478F-9FD2-519729D9805F}
 	EndGlobalSection
 EndGlobal

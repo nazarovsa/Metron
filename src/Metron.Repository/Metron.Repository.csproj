@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <PackageVersion>0.0.1</PackageVersion>
+        <Title>Repositories for Metron</Title>
+        <Authors>Sergey Nazarov</Authors>
+        <Copyright>Copyright © 2020 Sergey Nazarov</Copyright>
+        <PackageProjectUrl>https://github.com/InsightAppDev/Metron</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/InsightAppDev/Metron</RepositoryUrl>
+        <RepositoryType>Github</RepositoryType>
+        <PackageLicenseUrl>https://github.com/InsightAppDev/Metron.Repository/blob/master/LICENSE</PackageLicenseUrl>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="MongoDB.Driver" Version="2.10.3" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Metron\Metron.csproj" />
+    </ItemGroup>
+
+</Project>

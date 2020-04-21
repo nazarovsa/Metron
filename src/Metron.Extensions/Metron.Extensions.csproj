@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <PackageVersion>0.0.1</PackageVersion>
+        <Title>Metron.Extensions</Title>
+        <Authors>Sergey Nazarov</Authors>
+        <Description>Extensions for metron</Description>
+        <Copyright>Copyright © 2020 Sergey Nazarov</Copyright>
+        <PackageProjectUrl>https://github.com/InsightAppDev/Metron.Extensions</PackageProjectUrl>
+        <PackageLicenseUrl>https://github.com/InsightAppDev/Metron.Extensions/blob/master/LICENSE</PackageLicenseUrl>
+        <RepositoryUrl>https://github.com/InsightAppDev/Metron.Extensions</RepositoryUrl>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Autofac" Version="5.1.2" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Metron\Metron.csproj" />
+    </ItemGroup>
+
+</Project>

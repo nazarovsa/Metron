@@ -2,7 +2,7 @@
 
     <PropertyGroup>
         <TargetFramework>netstandard2.0</TargetFramework>
-        <PackageVersion>0.0.1</PackageVersion>
+        <PackageVersion>0.0.2</PackageVersion>
         <Title>Metron.Extensions</Title>
         <Authors>Sergey Nazarov</Authors>
         <Description>Extensions for metron</Description>

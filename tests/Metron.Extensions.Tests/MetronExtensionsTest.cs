@@ -22,6 +22,11 @@ namespace Metron.Extensions.Tests
         {
             throw new NotImplementedException();
         }
+
+        public Task<IReadOnlyCollection<TestModel>> Get(DateTimeOffset? @from, DateTimeOffset? to, CancellationToken cancellationToken = default)
+        {
+            throw new NotImplementedException();
+        }
     }
     
     public class MetronExtensionsTest

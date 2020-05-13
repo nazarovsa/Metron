@@ -18,7 +18,7 @@ namespace Metron.Tests
         }
 
         [Fact]
-        public async Task Add()
+        public async Task Should_add()
         {
             var record = new TestModel
             {
@@ -31,9 +31,17 @@ namespace Metron.Tests
         }
 
         [Fact]
-        public async Task Get()
+        public async Task Should_get()
         {
             var result = await _fixture.Metron.Get();
+            Assert.NotNull(result);
+            Assert.NotEmpty(result);
+        }
+
+        [Fact]
+        public async Task Should_get_with_from_to()
+        {
+            var result = await _fixture.Metron.Get(DateTimeOffset.UtcNow - TimeSpan.FromHours(3), DateTimeOffset.UtcNow);
             Assert.NotNull(result);
             Assert.NotEmpty(result);
         }

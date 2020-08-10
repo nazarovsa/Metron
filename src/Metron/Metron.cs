@@ -18,13 +18,17 @@ namespace Metron
             _repository = repository;
         }
 
-        public Task Add(TModel model, CancellationToken cancellationToken = default) 
+        public Task Add(TModel model, CancellationToken cancellationToken = default)
             => _repository.Add(model, cancellationToken);
 
-        public Task<IReadOnlyCollection<TModel>> Get(CancellationToken cancellationToken = default) 
+        public Task<IReadOnlyCollection<TModel>> Get(CancellationToken cancellationToken = default)
             => _repository.Get(cancellationToken);
 
-        public Task<IReadOnlyCollection<TModel>> Get(DateTimeOffset? from, DateTimeOffset? to, CancellationToken cancellationToken = default)
+        public Task<IReadOnlyCollection<TModel>> Get(DateTimeOffset? from, DateTimeOffset? to,
+            CancellationToken cancellationToken = default)
             => _repository.Get(from, to, cancellationToken);
+
+        public Task<long> Count(CancellationToken cancellationToken = default)
+            => _repository.Count(cancellationToken);
     }
 }

@@ -12,5 +12,7 @@ namespace Metron
         Task<IReadOnlyCollection<TModel>> Get(CancellationToken cancellationToken = default);
 
         Task<IReadOnlyCollection<TModel>> Get(DateTimeOffset? from, DateTimeOffset? to, CancellationToken cancellationToken = default);
+        
+        Task<long> Count(CancellationToken cancellationToken = default);
     }
 }

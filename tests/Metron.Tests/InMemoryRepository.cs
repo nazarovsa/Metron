@@ -30,7 +30,8 @@ namespace Metron.Tests
             return Task.FromResult<IReadOnlyCollection<TModel>>(_items);
         }
 
-        public Task<IReadOnlyCollection<TModel>> Get(DateTimeOffset? from, DateTimeOffset? to, CancellationToken cancellationToken = default)
+        public Task<IReadOnlyCollection<TModel>> Get(DateTimeOffset? from, DateTimeOffset? to,
+            CancellationToken cancellationToken = default)
         {
             IEnumerable<TModel> query = _items;
             if (from.HasValue)
@@ -40,6 +41,11 @@ namespace Metron.Tests
                 query = query.Where(x => x.CreatedAt <= to);
 
             return Task.FromResult<IReadOnlyCollection<TModel>>(query.ToList());
+        }
+
+        public Task<long> Count(CancellationToken cancellationToken = default)
+        {
+            return Task.FromResult<long>(_items.Count);
         }
     }
 }

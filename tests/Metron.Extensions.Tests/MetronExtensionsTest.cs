@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 using Autofac;
+using Microsoft.Extensions.DependencyInjection;
 using Xunit;
 
 namespace Metron.Extensions.Tests
@@ -27,12 +28,17 @@ namespace Metron.Extensions.Tests
         {
             throw new NotImplementedException();
         }
+
+        public Task<long> Count(CancellationToken cancellationToken = default)
+        {
+            throw new NotImplementedException();
+        }
     }
     
     public class MetronExtensionsTest
     {
         [Fact]
-        public void Should_register_metron_and_repository_in_container()
+        public void Should_register_metron_and_repository_in_Autofac_container()
         {
             var builder = new ContainerBuilder();
 
@@ -44,6 +50,21 @@ namespace Metron.Extensions.Tests
             Assert.NotNull(metron);
             
             var repo = container.Resolve<IModelRepository<TestModel>>();
+            Assert.NotNull(repo);
+        }
+        
+        [Fact]
+        public void Should_register_metron_and_repository_in_ServiceCollection()
+        {
+            var services = new ServiceCollection();
+
+            services.AddMetronScoped<TestModel, TestRepository>();
+            var provider = services.BuildServiceProvider();
+            
+            var metron = provider.GetService<Metron<TestModel>>();
+            Assert.NotNull(metron);
+            
+            var repo = provider.GetService<IModelRepository<TestModel>>();
             Assert.NotNull(repo);
         }
     }

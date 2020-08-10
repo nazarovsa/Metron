@@ -6,7 +6,7 @@ using MongoDB.Driver;
 
 namespace Metron.Repository.Mongo
 {
-    public sealed class MongoModelRepository<TModel> : IModelRepository<TModel> 
+    public sealed class MongoModelRepository<TModel> : IModelRepository<TModel>
         where TModel : Model
     {
         private readonly MongoConnection _connection;
@@ -36,13 +36,23 @@ namespace Metron.Repository.Mongo
             return result;
         }
 
-        public async Task<IReadOnlyCollection<TModel>> Get(DateTimeOffset? from, DateTimeOffset? to, CancellationToken cancellationToken = default)
+        public async Task<IReadOnlyCollection<TModel>> Get(DateTimeOffset? from, DateTimeOffset? to,
+            CancellationToken cancellationToken = default)
         {
             var collection = _connection.GetCollection<TModel>(GetCollectionName());
             var result = await collection
                 .FindAsync(x => x.CreatedAt >= from && x.CreatedAt <= to, cancellationToken: cancellationToken)
                 .Result
                 .ToListAsync(cancellationToken);
+
+            return result;
+        }
+
+
+        public async Task<long> Count(CancellationToken cancellationToken = default)
+        {
+            var collection = _connection.GetCollection<TModel>(GetCollectionName());
+            var result = await collection.CountDocumentsAsync(_ => true, cancellationToken: cancellationToken);
 
             return result;
         }
